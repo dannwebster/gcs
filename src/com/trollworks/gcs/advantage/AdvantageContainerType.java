@@ -55,6 +55,16 @@ public enum AdvantageContainerType {
 		}
 	};
 
+	POINT_CHOICE {
+		@Override
+        public String toString() { return POINT_CHOICE_TITLE; }
+	};
+
+    COUNT_CHOICE {
+		@Override
+        public String toString() { return COUNT_CHOICE_TITLE; }
+	};
+
 	@Localize("Group")
 	@Localize(locale = "de", value = "Gruppe")
 	@Localize(locale = "ru", value = "Группа")
@@ -74,6 +84,18 @@ public enum AdvantageContainerType {
 	@Localize(locale = "ru", value = "Альтернативные способности")
 	@Localize(locale = "es", value = "Habilidades Alternativas")
 	static String	ALTERNATIVE_ABILITIES_TITLE;
+    @Localize("Point-Based Choice")
+	@Localize(locale = "de", value = "Punkt-Basierte Wahl")
+	@Localize(locale = "ru", value = "Выбор точки на основе")
+	@Localize(locale = "es", value = "Elección Basado en Puntos")
+	static String	POINT_CHOICE_TITLE;
+	/*
+    @Localize("Count-Based Choice")
+	@Localize(locale = "de", value = "Count-Basierte Wahl")
+	@Localize(locale = "ru", value = "выбор рассчитывать на основе")
+	@Localize(locale = "es", value = "Elección Basada en Contar")
+	static String	COUNT_CHOICE_TITLE;
+	*/
 
 	static {
 		Localization.initialize();
